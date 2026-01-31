@@ -1,5 +1,3 @@
-import { Heart, Flag, Trophy, Users } from "lucide-react";
-
 export const Story = () => {
   return (
     <section id="historia" className="py-16 sm:py-24 bg-background relative overflow-hidden">
@@ -36,28 +34,6 @@ export const Story = () => {
               cumplido su sueño. <strong className="text-foreground">Lejos de conformarse</strong>, ahora ya 
               está trabajando por su siguiente reto: correr la <strong className="text-foreground">Maratón de Sídney</strong>.
             </p>
-          </div>
-
-          {/* Stats grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 mt-10 sm:mt-16">
-            {[
-              { icon: Trophy, value: "42.195", label: "Kilómetros", suffix: "km" },
-              { icon: Flag, value: "100", label: "Camisetas", suffix: "" },
-              { icon: Heart, value: "1", label: "Sueño", suffix: "" },
-              { icon: Users, value: "∞", label: "Apoyo", suffix: "" },
-            ].map((stat, index) => (
-              <div 
-                key={index}
-                className="text-center p-4 sm:p-6 rounded-xl bg-gradient-card border border-border hover:border-primary/30 transition-all duration-300"
-              >
-                <stat.icon className="w-6 h-6 sm:w-8 sm:h-8 text-primary mx-auto mb-2 sm:mb-4" />
-                <div className="font-display text-xl sm:text-3xl font-bold text-foreground">
-                  {stat.value}
-                  <span className="text-primary text-sm sm:text-lg">{stat.suffix}</span>
-                </div>
-                <div className="text-xs sm:text-sm text-muted-foreground mt-1">{stat.label}</div>
-              </div>
-            ))}
           </div>
 
           {/* Quote */}

@@ -50,17 +50,6 @@ export const Product = ({ onOrderClick }: ProductProps) => {
 
       <div className="container px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
-          {/* Section header */}
-          <div className="text-center mb-10 sm:mb-16">
-            <span className="text-primary font-medium text-xs sm:text-sm uppercase tracking-wider">Producto Exclusivo</span>
-            <h2 className="font-display text-2xl sm:text-4xl md:text-5xl font-bold mt-3 sm:mt-4 px-2">
-              Camiseta Oficial
-              <span className="text-gradient-gold"> Team Tincho</span>
-            </h2>
-            <p className="text-sm sm:text-base text-muted-foreground mt-3 sm:mt-4 max-w-2xl mx-auto px-4">
-              Edición limitada de 100 unidades. Cada camiseta representa tu apoyo al sueño de Martín.
-            </p>
-          </div>
 
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
             {/* Product Images */}
