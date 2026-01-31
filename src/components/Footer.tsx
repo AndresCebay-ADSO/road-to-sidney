@@ -1,4 +1,4 @@
-import { MapPin, Mail, Instagram, Youtube, Facebook } from "lucide-react";
+import { MapPin, Instagram, Youtube, Facebook } from "lucide-react";
 
 // TikTok icon component (no disponible en lucide-react)
 const TikTokIcon = ({ className }: { className?: string }) => (
@@ -37,38 +37,37 @@ export const Footer = () => {
 
   return (
     <footer className="bg-charcoal border-t border-border">
-      <div className="container px-4 sm:px-6 py-12 sm:py-16">
+      <div className="container px-4 sm:px-6 py-10 sm:py-16">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
             {/* Brand section */}
-            <div className="md:col-span-1">
-              <h3 className="font-display text-2xl sm:text-3xl font-bold mb-1">
-                Legacy Berlin 2025
+            <div className="col-span-2 md:col-span-1 mb-4 md:mb-0">
+              <h3 className="font-display text-xl sm:text-2xl md:text-3xl font-bold mb-1">
+                Team Tincho
               </h3>
-              <div className="w-12 h-1 bg-primary rounded-full mb-4" />
-              <p className="text-sm sm:text-base text-muted-foreground mb-6 max-w-sm">
-                Un proyecto de superación que une a Colombia con el mundo. 
+              <div className="w-10 h-1 bg-primary rounded-full mb-3" />
+              <p className="text-xs sm:text-sm text-muted-foreground mb-4 max-w-sm">
                 Apoya a Martín Perdomo en su camino hacia la Maratón de Sídney 2026.
               </p>
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <MapPin className="w-4 h-4 text-primary flex-shrink-0" />
-                <span>Berlín, Alemania</span>
+              <div className="flex items-center gap-1.5 text-xs sm:text-sm text-muted-foreground">
+                <MapPin className="w-3.5 h-3.5 text-primary flex-shrink-0" />
+                <span>Berlín</span>
                 <span className="text-primary">→</span>
-                <span>Sídney, Australia</span>
+                <span>Sídney</span>
               </div>
             </div>
 
             {/* Navigation */}
-            <div className="md:col-span-1">
-              <h4 className="font-display font-semibold text-sm uppercase tracking-wider text-muted-foreground mb-4">
+            <div>
+              <h4 className="font-display font-semibold text-xs uppercase tracking-wider text-muted-foreground mb-3">
                 Navegación
               </h4>
-              <nav className="flex flex-col gap-3">
+              <nav className="flex flex-col gap-2">
                 {navLinks.map((link) => (
                   <button
                     key={link.label}
                     onClick={() => scrollToSection(link.href)}
-                    className="text-left text-foreground hover:text-primary transition-colors text-sm sm:text-base"
+                    className="text-left text-foreground hover:text-primary transition-colors text-xs sm:text-sm"
                   >
                     {link.label}
                   </button>
@@ -79,17 +78,8 @@ export const Footer = () => {
             {/* Connect */}
             <div className="md:col-span-1">
               <h4 className="font-display font-semibold text-sm uppercase tracking-wider text-muted-foreground mb-4">
-                Conecta
+                Redes Sociales
               </h4>
-              
-              {/* Contact */}
-              <a 
-                href="mailto:contacto@teamtincho.com"
-                className="flex items-center gap-2 text-foreground hover:text-primary transition-colors mb-6 text-sm sm:text-base"
-              >
-                <Mail className="w-4 h-4" />
-                Contacto
-              </a>
 
               {/* Social icons */}
               <div className="flex gap-3">
