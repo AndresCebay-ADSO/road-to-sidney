@@ -4,10 +4,9 @@ import heroImage from "@/assets/hero.jpg";
 
 interface HeroProps {
   onOrderClick: () => void;
-  availableShirts: number;
 }
 
-export const Hero = ({ onOrderClick, availableShirts }: HeroProps) => {
+export const Hero = ({ onOrderClick }: HeroProps) => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background hero image */}
@@ -25,7 +24,7 @@ export const Hero = ({ onOrderClick, availableShirts }: HeroProps) => {
           <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-secondary border border-border animate-fade-in">
             <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
             <span className="text-xs sm:text-sm font-medium text-muted-foreground">
-              Solo <span className="text-primary font-bold">{availableShirts}</span> camisetas disponibles
+              Edición limitada
             </span>
           </div>
 

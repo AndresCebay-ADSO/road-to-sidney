@@ -17,7 +17,6 @@ import camisaDetalle from "@/assets/camisa-detalle.jpg";
 
 interface ProductProps {
   onOrderClick: () => void;
-  availableShirts: number;
 }
 
 const features = [
@@ -33,10 +32,7 @@ const productImages = [
   { src: camisaDetalle, alt: "Camiseta Team Tincho - Detalle del diseño" },
 ];
 
-export const Product = ({ 
-  onOrderClick, 
-  availableShirts 
-}: ProductProps) => {
+export const Product = ({ onOrderClick }: ProductProps) => {
   const [loadedImages, setLoadedImages] = useState<Set<number>>(new Set());
   const [isSizeFinderOpen, setIsSizeFinderOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(0);
@@ -131,12 +127,6 @@ export const Product = ({
                 </div>
               )}
 
-              {/* Availability badge */}
-              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-background border border-primary px-4 sm:px-6 py-2 sm:py-3 rounded-full shadow-gold z-10">
-                <span className="text-xs sm:text-sm font-medium whitespace-nowrap">
-                  Quedan <span className="text-primary font-bold">{availableShirts}</span> de 100
-                </span>
-              </div>
             </div>
 
             {/* Product Details */}

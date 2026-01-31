@@ -3,20 +3,16 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Story } from "@/components/Story";
 import { Product } from "@/components/Product";
+import { Gallery } from "@/components/Gallery";
 import { SocialProof } from "@/components/SocialProof";
 import { Footer } from "@/components/Footer";
 import { OrderModal } from "@/components/OrderModal";
 
 const Index = () => {
   const [isOrderModalOpen, setIsOrderModalOpen] = useState(false);
-  const [availableShirts, setAvailableShirts] = useState(87);
 
   const handleOrderClick = () => {
     setIsOrderModalOpen(true);
-  };
-
-  const handleOrderComplete = () => {
-    setAvailableShirts(prev => Math.max(0, prev - 1));
   };
 
   return (
@@ -24,19 +20,15 @@ const Index = () => {
       <Header onOrderClick={handleOrderClick} />
       
       <main>
-        <Hero 
-          onOrderClick={handleOrderClick} 
-          availableShirts={availableShirts}
-        />
+        <Hero onOrderClick={handleOrderClick} />
         
         <Story />
         
-        <Product 
-          onOrderClick={handleOrderClick}
-          availableShirts={availableShirts}
-        />
+        <Product onOrderClick={handleOrderClick} />
+
+        <Gallery />
         
-        <SocialProof availableShirts={availableShirts} />
+        <SocialProof />
       </main>
 
       <Footer />
@@ -45,7 +37,7 @@ const Index = () => {
       <OrderModal 
         open={isOrderModalOpen}
         onClose={() => setIsOrderModalOpen(false)}
-        onOrderComplete={handleOrderComplete}
+        onOrderComplete={() => {}}
       />
     </div>
   );
