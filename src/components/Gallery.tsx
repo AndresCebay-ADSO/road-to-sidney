@@ -12,6 +12,8 @@ import legacy1 from "@/assets/legacy-1.avif";
 import legacy2 from "@/assets/legacy-2.avif";
 import legacy3 from "@/assets/legacy-3.avif";
 import legacy4 from "@/assets/legacy-4.avif";
+import legacy5 from "@/assets/legacy-5.avif";
+import legacy6 from "@/assets/legacy-6.avif";
 
 // Carousel data for each section
 const carouselData = [
