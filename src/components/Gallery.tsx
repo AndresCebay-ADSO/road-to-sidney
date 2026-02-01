@@ -75,7 +75,7 @@ const GalleryCarousel = ({ title, images }: GalleryCarouselProps) => {
       </div>
 
       {/* Carousel */}
-      <div ref={emblaRef} className="overflow-hidden aspect-[4/3] bg-neutral-800">
+      <div ref={emblaRef} className="overflow-hidden aspect-square bg-neutral-800">
         <div className="flex h-full">
           {images.map((image, index) => (
             <div
@@ -85,7 +85,7 @@ const GalleryCarousel = ({ title, images }: GalleryCarouselProps) => {
               <img
                 src={image}
                 alt={`${title} - ${index + 1}`}
-                className="w-full h-full object-cover transition-transform duration-700"
+                className="w-full h-full object-cover object-[center_20%] transition-transform duration-700"
                 loading="lazy"
               />
             </div>
