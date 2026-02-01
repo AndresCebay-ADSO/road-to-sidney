@@ -1,17 +1,19 @@
 import { ArrowDown, MapPin, Calendar, Target } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero.webp";
+
 interface HeroProps {
   onOrderClick: () => void;
 }
-export const Hero = ({
-  onOrderClick
-}: HeroProps) => {
-  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+
+export const Hero = ({ onOrderClick }: HeroProps) => {
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background hero image */}
-      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-      backgroundImage: `url(${heroImage})`
-    }} />
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${heroImage})` }}
+      />
       
       {/* Dark overlay for text readability */}
       <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/60 to-background" />
@@ -20,24 +22,18 @@ export const Hero = ({
         <div className="max-w-4xl mx-auto text-center space-y-6 sm:space-y-8">
 
           {/* Main heading */}
-          <h1 className="font-display text-3xl sm:text-5xl md:text-7xl font-bold leading-tight animate-fade-in px-2" style={{
-          animationDelay: "0.1s"
-        }}>
+          <h1 className="font-display text-3xl sm:text-5xl md:text-7xl font-bold leading-tight animate-fade-in px-2" style={{ animationDelay: "0.1s" }}>
             Martín Perdomo
-            <span className="block text-gradient-gold mt-2 py-0 px-0 pr-0 pl-0 pb-0 pt-[10px] bg-transparent text-primary">Camino a Sidney 2026</span>
+            <span className="block text-gradient-gold mt-2">Camino a Sidney 2026</span>
           </h1>
 
           {/* Subtitle */}
-          <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto animate-fade-in px-4" style={{
-          animationDelay: "0.2s"
-        }}>
+          <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto animate-fade-in px-4" style={{ animationDelay: "0.2s" }}>
             Un colombiano que representará a su país en una de las 7 maratones más importantes del mundo
           </p>
 
           {/* Event info */}
-          <div className="flex flex-wrap justify-center gap-3 sm:gap-6 text-xs sm:text-sm animate-fade-in px-2" style={{
-          animationDelay: "0.3s"
-        }}>
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-6 text-xs sm:text-sm animate-fade-in px-2" style={{ animationDelay: "0.3s" }}>
             <div className="flex items-center gap-1.5 sm:gap-2 text-muted-foreground">
               <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary" />
               <span>Sídney, Australia</span>
@@ -53,23 +49,26 @@ export const Hero = ({
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center pt-4 animate-fade-in px-4" style={{
-          animationDelay: "0.4s"
-        }}>
-            <Button size="lg" onClick={onOrderClick} className="bg-primary text-primary-foreground hover:bg-gold-light font-display font-semibold text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 shadow-gold hover:shadow-glow transition-all duration-300">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center pt-4 animate-fade-in px-4" style={{ animationDelay: "0.4s" }}>
+            <Button 
+              size="lg" 
+              onClick={onOrderClick}
+              className="bg-primary text-primary-foreground hover:bg-gold-light font-display font-semibold text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 shadow-gold hover:shadow-glow transition-all duration-300"
+            >
               Reservar mi camiseta
             </Button>
-            <Button size="lg" variant="outline" onClick={() => document.getElementById('historia')?.scrollIntoView({
-            behavior: 'smooth'
-          })} className="border-border hover:bg-secondary font-display font-medium text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6">
+            <Button 
+              size="lg" 
+              variant="outline"
+              onClick={() => document.getElementById('historia')?.scrollIntoView({ behavior: 'smooth' })}
+              className="border-border hover:bg-secondary font-display font-medium text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6"
+            >
               Conocer la historia
             </Button>
           </div>
 
           {/* Trust badge */}
-          <p className="text-xs sm:text-sm text-muted-foreground animate-fade-in px-4" style={{
-          animationDelay: "0.5s"
-        }}>
+          <p className="text-xs sm:text-sm text-muted-foreground animate-fade-in px-4" style={{ animationDelay: "0.5s" }}>
             💳 Pago contraentrega • Sin riesgos • Pagas cuando recibas tu camiseta
           </p>
         </div>
@@ -79,5 +78,6 @@ export const Hero = ({
           <ArrowDown className="w-6 h-6 text-muted-foreground" />
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
