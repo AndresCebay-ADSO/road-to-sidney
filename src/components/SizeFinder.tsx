@@ -10,6 +10,8 @@ import {
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Slider } from "@/components/ui/slider";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { MeasurementsGuide } from "@/components/MeasurementsGuide";
 
 interface SizeFinderProps {
   open: boolean;
@@ -103,7 +105,7 @@ export const SizeFinder = ({ open, onClose }: SizeFinderProps) => {
 
   return (
     <Dialog open={open} onOpenChange={handleClose}>
-      <DialogContent className="sm:max-w-md bg-card border-border">
+      <DialogContent className="sm:max-w-lg bg-card border-border max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="font-display text-xl flex items-center gap-2">
             <Shirt className="w-5 h-5 text-primary" />
@@ -111,18 +113,28 @@ export const SizeFinder = ({ open, onClose }: SizeFinderProps) => {
           </DialogTitle>
         </DialogHeader>
 
-        <div className="py-4">
-          {/* Progress indicator */}
-          <div className="flex gap-2 mb-8">
-            {[1, 2, 3].map((s) => (
-              <div
-                key={s}
-                className={`h-1 flex-1 rounded-full transition-colors ${
-                  s <= step ? "bg-primary" : "bg-secondary"
-                }`}
-              />
-            ))}
-          </div>
+        <Tabs defaultValue="calculator" className="w-full">
+          <TabsList className="grid w-full grid-cols-2">
+            <TabsTrigger value="calculator">Calculadora</TabsTrigger>
+            <TabsTrigger value="measurements">Medidas</TabsTrigger>
+          </TabsList>
+
+          <TabsContent value="measurements" className="mt-4">
+            <MeasurementsGuide />
+          </TabsContent>
+
+          <TabsContent value="calculator" className="mt-4">
+            {/* Progress indicator */}
+            <div className="flex gap-2 mb-8">
+              {[1, 2, 3].map((s) => (
+                <div
+                  key={s}
+                  className={`h-1 flex-1 rounded-full transition-colors ${
+                    s <= step ? "bg-primary" : "bg-secondary"
+                  }`}
+                />
+              ))}
+            </div>
 
           {/* Step 1: Sex */}
           {step === 1 && (
@@ -218,38 +230,39 @@ export const SizeFinder = ({ open, onClose }: SizeFinderProps) => {
             </div>
           )}
 
-          {/* Step 3: Result */}
-          {step === 3 && fitResult && (
-            <div className="text-center space-y-6">
-              <div className="w-24 h-24 mx-auto rounded-full bg-primary/20 flex items-center justify-center">
-                <span className="text-5xl">{fitResult.icon}</span>
-              </div>
-              <div>
-                <span className="font-display text-2xl font-bold text-gradient-gold">{fitResult.title}</span>
-              </div>
-              <p className="text-muted-foreground">
-                {fitResult.description}
-              </p>
-              <div className="p-4 rounded-lg bg-primary/10 border border-primary/30">
-                <div className="flex items-center justify-center gap-2 mb-2">
-                  <Check className="w-5 h-5 text-primary" />
-                  <span className="font-medium text-foreground">Talla única</span>
+            {/* Step 3: Result */}
+            {step === 3 && fitResult && (
+              <div className="text-center space-y-6">
+                <div className="w-24 h-24 mx-auto rounded-full bg-primary/20 flex items-center justify-center">
+                  <span className="text-5xl">{fitResult.icon}</span>
                 </div>
-                <p className="text-sm text-muted-foreground">
-                  Diseño versátil que se adapta a diferentes cuerpos
+                <div>
+                  <span className="font-display text-2xl font-bold text-gradient-gold">{fitResult.title}</span>
+                </div>
+                <p className="text-muted-foreground">
+                  {fitResult.description}
                 </p>
+                <div className="p-4 rounded-lg bg-primary/10 border border-primary/30">
+                  <div className="flex items-center justify-center gap-2 mb-2">
+                    <Check className="w-5 h-5 text-primary" />
+                    <span className="font-medium text-foreground">Talla única</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    Diseño versátil que se adapta a diferentes cuerpos
+                  </p>
+                </div>
+                <div className="flex gap-3">
+                  <Button variant="outline" onClick={handleReset} className="flex-1">
+                    Calcular de nuevo
+                  </Button>
+                  <Button onClick={handleClose} className="flex-1 bg-primary text-primary-foreground hover:bg-gold-light">
+                    ¡Entendido!
+                  </Button>
+                </div>
               </div>
-              <div className="flex gap-3">
-                <Button variant="outline" onClick={handleReset} className="flex-1">
-                  Calcular de nuevo
-                </Button>
-                <Button onClick={handleClose} className="flex-1 bg-primary text-primary-foreground hover:bg-gold-light">
-                  ¡Entendido!
-                </Button>
-              </div>
-            </div>
-          )}
-        </div>
+            )}
+          </TabsContent>
+        </Tabs>
       </DialogContent>
     </Dialog>
   );
