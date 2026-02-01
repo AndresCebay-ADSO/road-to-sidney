@@ -195,10 +195,10 @@ export const OrderModal = ({ open, onClose, onOrderComplete }: OrderModalProps) 
 
               <div className="p-4 rounded-lg bg-primary/10 border border-primary/30 space-y-2">
                 <p className="text-sm text-muted-foreground">
-                  📲 <strong className="text-foreground">Flujo de compra:</strong> Pedido → WhatsApp → Confirmación de pago → Envío
+                  <strong className="text-foreground">Flujo de compra:</strong> Pedido → Coordinación → Confirmación de pago → Envío
                 </p>
                 <p className="text-xs text-muted-foreground">
-                  🚚 <strong className="text-foreground">Envío GRATIS</strong> en La Plata, Huila. Otras ciudades: costo a cargo del cliente.
+                  <strong className="text-foreground">Envío GRATIS</strong> en La Plata, Huila. Otras ciudades: costo a cargo del cliente.
                 </p>
               </div>
 
