@@ -21,8 +21,8 @@ interface ProductProps {
 
 const features = [
   { icon: Package, text: "Material deportivo de alta calidad" },
-  { icon: Truck, text: "Envío a domicilio" },
-  { icon: Check, text: "Pago contraentrega seguro" },
+  { icon: Truck, text: "Envío GRATIS en La Plata, Huila" },
+  { icon: Check, text: "Coordinación y pago vía WhatsApp" },
 ];
 
 const productImages = [
@@ -180,7 +180,7 @@ export const Product = ({ onOrderClick }: ProductProps) => {
               </div>
 
               <p className="text-center text-xs sm:text-sm text-muted-foreground">
-                🔒 Tu información está segura. Pago al momento de la entrega.
+                🔒 Tu información está segura. Pago confirmado vía WhatsApp.
               </p>
 
               {/* Inspirational quote */}

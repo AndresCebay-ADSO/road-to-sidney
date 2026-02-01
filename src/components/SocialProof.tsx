@@ -13,12 +13,12 @@ export const SocialProof = () => {
               { 
                 icon: Shield, 
                 title: "Pago Seguro", 
-                description: "Pagas solo cuando recibes tu camiseta" 
+                description: "Confirma tu pago vía WhatsApp" 
               },
               { 
                 icon: Truck, 
                 title: "Envío Nacional", 
-                description: "Entregamos a cualquier ciudad de Colombia" 
+                description: "GRATIS en La Plata • Otras ciudades: costo a cargo del cliente" 
               },
               { 
                 icon: Star, 

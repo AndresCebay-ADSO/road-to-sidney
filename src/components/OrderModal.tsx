@@ -193,9 +193,12 @@ export const OrderModal = ({ open, onClose, onOrderComplete }: OrderModalProps) 
                 </div>
               </div>
 
-              <div className="p-4 rounded-lg bg-primary/10 border border-primary/30">
+              <div className="p-4 rounded-lg bg-primary/10 border border-primary/30 space-y-2">
                 <p className="text-sm text-muted-foreground">
-                  💳 <strong className="text-foreground">Pago contraentrega:</strong> Pagarás $80.000 COP únicamente cuando recibas tu camiseta.
+                  📲 <strong className="text-foreground">Flujo de compra:</strong> Pedido → WhatsApp → Confirmación de pago → Envío
+                </p>
+                <p className="text-xs text-muted-foreground">
+                  🚚 <strong className="text-foreground">Envío GRATIS</strong> en La Plata, Huila. Otras ciudades: costo a cargo del cliente.
                 </p>
               </div>
 
@@ -273,7 +276,10 @@ export const OrderModal = ({ open, onClose, onOrderComplete }: OrderModalProps) 
               <div className="p-4 rounded-lg bg-secondary border border-border text-left">
                 <p className="text-sm text-muted-foreground mb-2">Resumen del pedido:</p>
                 <p className="font-medium">Camiseta Team Tincho - Talla Única</p>
-                <p className="text-primary font-bold">$80.000 COP (pago contraentrega)</p>
+                <p className="text-primary font-bold">$80.000 COP</p>
+                <p className="text-xs text-muted-foreground mt-2">
+                  📲 Te contactaremos por WhatsApp para confirmar el pago y coordinar el envío.
+                </p>
               </div>
 
               <Button 
