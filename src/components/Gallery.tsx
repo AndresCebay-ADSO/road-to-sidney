@@ -6,12 +6,12 @@ import { cn } from "@/lib/utils";
 // Images imports
 import heroImage from "@/assets/hero.webp";
 import sidneyMeta from "@/assets/sidney-1.jpg";
-import camisetaImage from "@/assets/camisa-pecho.png";
-import camisaEspalda from "@/assets/camisa-espalda.png";
 import sidneyOpera from "@/assets/sidney-2.avif";
 import sidney3 from "@/assets/sidney-3.jpg";
 import legacy1 from "@/assets/legacy-1.avif";
 import legacy2 from "@/assets/legacy-2.avif";
+import legacy3 from "@/assets/legacy-3.avif";
+import legacy4 from "@/assets/legacy-4.avif";
 
 // Carousel data for each section
 const carouselData = [
@@ -25,7 +25,7 @@ const carouselData = [
   },
   {
     title: "Camiseta Legacy",
-    images: [camisetaImage, camisaEspalda, legacy1, legacy2],
+    images: [legacy1, legacy2, legacy3, legacy4],
   },
   {
     title: "Destino: Sídney 2026",
