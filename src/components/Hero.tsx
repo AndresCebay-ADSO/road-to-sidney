@@ -69,7 +69,7 @@ export const Hero = ({ onOrderClick }: HeroProps) => {
 
           {/* Trust badge */}
           <p className="text-xs sm:text-sm text-muted-foreground animate-fade-in px-4" style={{ animationDelay: "0.5s" }}>
-            💳 Pago contraentrega • Sin riesgos • Pagas cuando recibas tu camiseta
+            📲 Pedido por WhatsApp • Envío GRATIS en La Plata, Huila
           </p>
         </div>
 
