@@ -69,7 +69,7 @@ export const Hero = ({ onOrderClick }: HeroProps) => {
 
           {/* Trust badge */}
           <p className="text-xs sm:text-sm text-muted-foreground animate-fade-in px-4" style={{ animationDelay: "0.5s" }}>
-            📲 Pedido por WhatsApp • Envío GRATIS en La Plata, Huila
+            Realiza tu pedido • Envío GRATIS en La Plata, Huila
           </p>
         </div>
 
