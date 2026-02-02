@@ -8,6 +8,10 @@ import heroImage from "@/assets/hero.webp";
 import sidneyMeta from "@/assets/sidney-1.jpg";
 import sidneyOpera from "@/assets/sidney-2.avif";
 import sidney3 from "@/assets/sidney-3.jpg";
+import cruzandoMeta1 from "@/assets/cruzando-meta-1.avif";
+import cruzandoMeta2 from "@/assets/cruzando-meta-2.avif";
+import cruzandoMeta3 from "@/assets/cruzando-meta-3.webp";
+import cruzandoMeta4 from "@/assets/cruzando-meta-4.avif";
 import legacy1 from "@/assets/legacy-1.avif";
 import legacy2 from "@/assets/legacy-2.avif";
 import legacy3 from "@/assets/legacy-3.avif";
@@ -37,8 +41,10 @@ const carouselData = [
   {
     title: "Cruzando la meta",
     images: [
-      { src: sidneyMeta, position: "center 20%" },
-      { src: sidney3, position: "center 20%" },
+      { src: cruzandoMeta1, position: "center 20%" },
+      { src: cruzandoMeta2, position: "center 20%" },
+      { src: cruzandoMeta3, position: "center 20%" },
+      { src: cruzandoMeta4, position: "center 20%" },
     ],
   },
   {
