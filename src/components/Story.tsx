@@ -10,8 +10,8 @@ export const Story = () => {
           <div className="text-center mb-10 sm:mb-16">
             <span className="text-primary font-medium text-xs sm:text-sm uppercase tracking-[0.25em]">HISTORIA</span>
             <h2 className="font-display text-3xl sm:text-5xl md:text-6xl font-bold mt-3 sm:mt-4 px-2">
-              Martin, De Berlin
-              <span className="text-gradient-gold"> a Sidney</span>
+              Martín, De Berlín
+              <span className="text-gradient-gold"> a Sídney</span>
             </h2>
           </div>
 
@@ -25,14 +25,14 @@ export const Story = () => {
             <p>
               Empezó entrenando duro y mostrando su proceso en <strong className="text-foreground">TikTok</strong>, 
               <strong className="text-foreground"> Instagram</strong> y <strong className="text-foreground">YouTube</strong>. 
-              Poco a poco la gente del pueblo lo fue conociendo y creyendo en él, tanto que comenzó a tocar 
+              Poco a poco, la gente del pueblo lo fue conociendo y creyendo en él, tanto que comenzó a tocar 
               puertas en tiendas, restaurantes y empresas locales hasta conseguir patrocinio.
             </p>
 
             <p>
               Con ese apoyo viajó a Berlín, corrió la maratón, la terminó y regresó a Colombia habiendo 
               cumplido su sueño. <strong className="text-foreground">Lejos de conformarse</strong>, ahora ya 
-              está trabajando por su siguiente reto: correr la <strong className="text-foreground">Maratón de Sídney</strong>.
+              está trabajando por su siguiente reto: correr la <strong className="text-foreground">Maratón de Sídney 2026</strong>.
             </p>
           </div>
 
