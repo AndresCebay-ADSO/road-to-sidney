@@ -29,6 +29,7 @@ const productImages = [
   { src: camisetaBoceto, alt: "Camiseta Team Tincho - Boceto del diseño", position: "center" },
   { src: camisetaFrente, alt: "Camiseta Team Tincho - Vista frontal", position: "center" },
   { src: camisetaEspalda, alt: "Camiseta Team Tincho - Vista trasera", position: "center" },
+  { src: camiseta4, alt: "Camiseta Team Tincho - Vista adicional", position: "center 30%" },
 ];
 
 export const Product = ({ onOrderClick }: ProductProps) => {
@@ -36,9 +37,6 @@ export const Product = ({ onOrderClick }: ProductProps) => {
   const [isSizeFinderOpen, setIsSizeFinderOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(0);
   const isMobile = useIsMobile();
-
-  // Ensure selectedImage is within bounds
-  const safeSelectedImage = Math.min(selectedImage, productImages.length - 1);
 
   const handleImageLoad = (index: number) => {
     setLoadedImages(prev => new Set(prev).add(index));
@@ -92,13 +90,13 @@ export const Product = ({ onOrderClick }: ProductProps) => {
                   {/* Main Image */}
                   <div className="relative aspect-square rounded-2xl overflow-hidden bg-gradient-card border border-border shadow-glow">
                     <img 
-                      src={productImages[safeSelectedImage].src}
-                      alt={productImages[safeSelectedImage].alt}
-                      className={`w-full h-full object-cover transition-opacity duration-500 ${loadedImages.has(safeSelectedImage) ? 'opacity-100' : 'opacity-0'}`}
-                      style={{ objectPosition: productImages[safeSelectedImage].position }}
-                      onLoad={() => handleImageLoad(safeSelectedImage)}
+                      src={productImages[selectedImage].src}
+                      alt={productImages[selectedImage].alt}
+                      className={`w-full h-full object-cover transition-opacity duration-500 ${loadedImages.has(selectedImage) ? 'opacity-100' : 'opacity-0'}`}
+                      style={{ objectPosition: productImages[selectedImage].position }}
+                      onLoad={() => handleImageLoad(selectedImage)}
                     />
-                    {!loadedImages.has(safeSelectedImage) && (
+                    {!loadedImages.has(selectedImage) && (
                       <div className="absolute inset-0 bg-secondary animate-pulse" />
                     )}
                   </div>
