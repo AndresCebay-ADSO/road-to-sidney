@@ -1,5 +1,6 @@
 import { ArrowDown, MapPin, Calendar, Target } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { AvailabilityCounter } from "@/components/AvailabilityCounter";
 import heroImage from "@/assets/hero.webp";
 
 interface HeroProps {
@@ -67,8 +68,13 @@ export const Hero = ({ onOrderClick }: HeroProps) => {
             </Button>
           </div>
 
+          {/* Availability Counter */}
+          <div className="animate-fade-in px-4" style={{ animationDelay: "0.5s" }}>
+            <AvailabilityCounter variant="badge" className="mx-auto" />
+          </div>
+
           {/* Trust badge */}
-          <p className="text-xs sm:text-sm text-muted-foreground animate-fade-in px-4" style={{ animationDelay: "0.5s" }}>
+          <p className="text-xs sm:text-sm text-muted-foreground animate-fade-in px-4" style={{ animationDelay: "0.6s" }}>
             Realiza tu pedido • Envío GRATIS en La Plata, Huila
           </p>
         </div>

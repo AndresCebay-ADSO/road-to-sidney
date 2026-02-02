@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Check, Package, Truck, HelpCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SizeFinder } from "@/components/SizeFinder";
+import { AvailabilityCounter } from "@/components/AvailabilityCounter";
 import { useIsMobile } from "@/hooks/use-mobile";
 import {
   Carousel,
@@ -163,6 +164,9 @@ export const Product = ({ onOrderClick }: ProductProps) => {
                 <span className="font-display text-3xl sm:text-4xl font-bold text-gradient-gold">$120.000</span>
                 <span className="text-sm sm:text-base text-muted-foreground">COP</span>
               </div>
+
+              {/* Availability Counter */}
+              <AvailabilityCounter variant="full" />
 
               {/* Features */}
               <div className="space-y-2 sm:space-y-3">
