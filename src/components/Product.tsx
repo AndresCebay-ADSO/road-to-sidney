@@ -41,7 +41,7 @@ export const Product = ({ onOrderClick }: ProductProps) => {
   };
 
   return (
-    <section id="producto" className="py-16 sm:py-24 bg-charcoal relative overflow-hidden">
+    <section id="producto" className="py-16 sm:py-24 bg-charcoal relative overflow-x-hidden">
       {/* Background elements */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
       <div className="absolute -right-40 top-1/2 -translate-y-1/2 w-80 h-80 bg-primary/5 rounded-full blur-3xl" />
@@ -64,11 +64,12 @@ export const Product = ({ onOrderClick }: ProductProps) => {
                   <CarouselContent>
                 {productImages.map((image, index) => (
                       <CarouselItem key={index}>
-                        <div className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-gradient-card border border-border shadow-glow">
+                        <div className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-charcoal border border-border shadow-glow">
+                          <div className="absolute inset-0 bg-gradient-to-b from-charcoal-light via-charcoal to-charcoal" />
                           <img 
                             src={image.src}
                             alt={image.alt}
-                            className={`w-full h-full object-contain transition-opacity duration-500 ${loadedImages.has(index) ? 'opacity-100' : 'opacity-0'}`}
+                            className={`relative w-full h-full object-contain p-2 transition-opacity duration-500 ${loadedImages.has(index) ? 'opacity-100' : 'opacity-0'}`}
                             style={{ objectPosition: image.position }}
                             onLoad={() => handleImageLoad(index)}
                           />
