@@ -22,6 +22,7 @@ const features = [
   { icon: Package, text: "Material deportivo de alta calidad" },
   { icon: Truck, text: "Envío GRATIS en La Plata, Huila" },
   { icon: Check, text: "Coordinación y pago vía WhatsApp" },
+  { icon: Check, text: "Contribución y apoyo a Martín" },
 ];
 
 const productImages = [
@@ -51,7 +52,7 @@ export const Product = ({ onOrderClick }: ProductProps) => {
           {/* Section header */}
           <div className="text-center mb-10 sm:mb-16">
             <h2 className="font-display text-2xl sm:text-4xl md:text-5xl font-bold px-2">
-              <span className="text-gradient-gold">Berlin Legacy</span> 2025
+              <span className="text-gradient-gold">Road to Berlín</span>
             </h2>
           </div>
 
@@ -146,10 +147,10 @@ export const Product = ({ onOrderClick }: ProductProps) => {
             {/* Product Details */}
             <div className="space-y-6 sm:space-y-8 mt-8 lg:mt-0">
               <div>
-                <h3 className="font-display text-xl sm:text-2xl font-bold mb-2">Road to Sydney 2026</h3>
+                <h3 className="font-display text-xl sm:text-2xl font-bold mb-2">Road to Berlín</h3>
                 <p className="text-sm sm:text-base text-muted-foreground">
                   Camiseta deportiva de alta calidad con diseño exclusivo que representa 
-                  el viaje de Martín hacia la Maratón de Sídney.
+                  el viaje de Martín hacia la Maratón de Sídney 2026.
                 </p>
               </div>
 

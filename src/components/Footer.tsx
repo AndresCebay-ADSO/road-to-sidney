@@ -53,7 +53,7 @@ export const Footer = () => {
                 <MapPin className="w-3.5 h-3.5 text-primary flex-shrink-0" />
                 <span>La Plata</span>
                 <span className="text-primary">→</span>
-                <span>Sidney</span>
+                <span>Sídney</span>
               </div>
             </div>
 
