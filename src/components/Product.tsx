@@ -26,10 +26,10 @@ const features = [
 ];
 
 const productImages = [
-  { src: camisetaBoceto, alt: "Camiseta Team Tincho - Boceto del diseño" },
-  { src: camisetaFrente, alt: "Camiseta Team Tincho - Vista frontal" },
-  { src: camisetaEspalda, alt: "Camiseta Team Tincho - Vista trasera" },
-  { src: camiseta4, alt: "Camiseta Team Tincho - Vista adicional" },
+  { src: camisetaBoceto, alt: "Camiseta Team Tincho - Boceto del diseño", position: "center" },
+  { src: camisetaFrente, alt: "Camiseta Team Tincho - Vista frontal", position: "center" },
+  { src: camisetaEspalda, alt: "Camiseta Team Tincho - Vista trasera", position: "center" },
+  { src: camiseta4, alt: "Camiseta Team Tincho - Vista adicional", position: "center 30%" },
 ];
 
 export const Product = ({ onOrderClick }: ProductProps) => {
@@ -71,6 +71,7 @@ export const Product = ({ onOrderClick }: ProductProps) => {
                             src={image.src}
                             alt={image.alt}
                             className={`w-full h-full object-contain transition-opacity duration-500 ${loadedImages.has(index) ? 'opacity-100' : 'opacity-0'}`}
+                            style={{ objectPosition: image.position }}
                             onLoad={() => handleImageLoad(index)}
                           />
                           {!loadedImages.has(index) && (
@@ -92,6 +93,7 @@ export const Product = ({ onOrderClick }: ProductProps) => {
                       src={productImages[selectedImage].src}
                       alt={productImages[selectedImage].alt}
                       className={`w-full h-full object-cover transition-opacity duration-500 ${loadedImages.has(selectedImage) ? 'opacity-100' : 'opacity-0'}`}
+                      style={{ objectPosition: productImages[selectedImage].position }}
                       onLoad={() => handleImageLoad(selectedImage)}
                     />
                     {!loadedImages.has(selectedImage) && (
